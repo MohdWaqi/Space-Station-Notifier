@@ -14,6 +14,8 @@ ISS_NOTIFY = "http://api.open-notify.org/iss-now.json"
 SUN_URL = "https://api.sunrise-sunset.org/json"
 EMAIL = "mohdwaqi06@gmail.com"
 
+############### Checking the position of International Space Station #########################
+
 
 def is_iss_overhead():
     response = requests.get(url=ISS_NOTIFY)
@@ -24,7 +26,7 @@ def is_iss_overhead():
     if MY_LAT-5 <= iss_latitude <= MY_LAT+5 and MY_LONG-5 <= iss_longitude <= MY_LONG+5:
         return True
 
-#Your position is within +5 or -5 degrees of the ISS position.
+############################ Checking if the sky is dark? ###########################
 
 
 def is_dark():
@@ -41,6 +43,8 @@ def is_dark():
     time_now = datetime.now().hour
     if time_now >= sunset or time_now <= sunrise:
         return True
+
+################### Sending mail if its dark and iss is on overhead ######################
 
 
 while True:
