@@ -10,8 +10,8 @@ MY_LAT = 28.838648
 MY_LONG = 78.773331
 load_dotenv()
 MY_KEY = os.environ["KEY"]
-ISS_NOTIFY = os.environ["ISS_API_URL"]
-SUN_URL = os.environ["SUNRISE_SUNSET_URL"]
+ISS_NOTIFY = "http://api.open-notify.org/iss-now.json"
+SUN_URL = "https://api.sunrise-sunset.org/json"
 EMAIL = "mohdwaqi06@gmail.com"
 
 
